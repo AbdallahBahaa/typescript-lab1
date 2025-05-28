@@ -1,4 +1,4 @@
-interface Product ={
+interface Product {
   id:number;
   name:string;
   price: number;
@@ -14,7 +14,9 @@ function logProduct(product:Product):void{
 
 type ProductOrError = Product | string;
 
-function wrapValue<T>(value: T): T[];
+function wrapValue<T>(value: T): T[]{
+    return [value];
+};
 
 interface ApiResult<T>{
     data: T;
